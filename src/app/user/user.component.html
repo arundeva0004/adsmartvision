@@ -1,0 +1,86 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Arundeva App</span>
+    <span class="example-fill-remaining-space"></span>
+    <span class="align-center"></span>
+    <span class="example-spacer"></span>
+
+    <!--<button mat-raised-button class="btn-space">Sign Up </button>
+    <button mat-raised-button class="btn-space">Sign In</button>
+    <button mat-raised-button class="btn-space">About</button>
+    <button mat-raised-button class="btn-space">Contact</button>-->
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voicemail</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Sign Up Here</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="sign-up-form">
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+          </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Username" [(ngModel)]="username" type="text" name="username" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Email" [(ngModel)]="email" type="email" name="email" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-radio-button value="male" class="radio-space">Male</mat-radio-button>
+            <mat-radio-button value="female" class="radio-space"> Female </mat-radio-button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Password" [(ngModel)]="password" type="password" name="password" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Repeat Password" [(ngModel)]="repeat_password" type="password" name="repeat_password" required>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="signIn()" color="primary">Sign up</button>
+  </mat-card-actions>
+</mat-card>

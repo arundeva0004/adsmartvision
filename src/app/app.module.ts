@@ -7,11 +7,14 @@ import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+/*import { InternationalPhoneNumberModule } from 'ngx-international-phone-number';*/
 @NgModule({
     declarations: [
         AppComponent,
         LoginComponent,
-        UserComponent
+        UserComponent,
+        DashboardComponent
     ],
     imports: [
         BrowserModule,
