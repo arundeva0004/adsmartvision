@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NgMarqueeModule } from 'ng-marquee';
 /*import { InternationalPhoneNumberModule } from 'ngx-international-phone-number';*/
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
         BrowserAnimationsModule,
         CustomMaterialModule,
         FormsModule,
-        AppRoutingModule
+        AppRoutingModule,
+        NgMarqueeModule
     ],
     providers: [],
     bootstrap: [AppComponent]
